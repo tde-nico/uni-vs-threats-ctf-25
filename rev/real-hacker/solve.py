@@ -1,0 +1,9 @@
+from pwn import xor
+
+enc = 'FFFCFED1F39ADFF59ED899F59DC299F5E79E9F9D99D8F59ACCF5F899DC99D89F99F599C4CD9BC49999D89BC4CDD7AA'
+enc = bytes.fromhex(enc)
+key = 0xAA
+
+print(xor(enc, key))
+
+# UVT{Y0u_4r3_7h3_M4573r_0f_R3v3r53_3ng1n33r1ng}
